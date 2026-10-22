@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body class="min-h-screen bg-slate-200 flex items-center justify-center p-4">
+
+  <main class="calculator w-full max-w-sm rounded-3xl bg-slate-950 p-5 shadow-2xl">
+    <h1 class="mb-5 text-2xl font-bold text-white">Calculator</h1>
+
+    <div class="mb-5 rounded-xl bg-slate-800 p-4 text-right">
+      <div id="expression" class="min-h-5 text-sm text-slate-400"></div>
+      <div id="display" class="break-words text-4xl text-white">0</div>
+    </div>
+
+    <div id="buttons" class="grid grid-cols-4 gap-3">
+      <button data-action="clear" class="key special">AC</button>
+      <button data-action="delete" class="key special">DEL</button>
+      <button data-action="percent" class="key special">%</button>
+      <button data-operator="/" class="key operator">÷</button>
+
+      <button data-number="7" class="key">7</button>
+      <button data-number="8" class="key">8</button>
+      <button data-number="9" class="key">9</button>
+      <button data-operator="*" class="key operator">×</button>
+
+      <button data-number="4" class="key">4</button>
+      <button data-number="5" class="key">5</button>
+      <button data-number="6" class="key">6</button>
+      <button data-operator="-" class="key operator">−</button>
+
+      <button data-number="1" class="key">1</button>
+      <button data-number="2" class="key">2</button>
+      <button data-number="3" class="key">3</button>
+      <button data-operator="+" class="key operator">+</button>
+
+      <button data-action="sign" class="key">+/−</button>
+      <button data-number="0" class="key">0</button>
+      <button data-action="decimal" class="key">.</button>
+      <button data-action="equals" class="key equals">=</button>
+    </div>
+  </main>
+
+  <script src="calc.js"></script>
+</body>
+</html>
